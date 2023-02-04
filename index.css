@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Flamenco&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap');
+:root {
+    --background_color: #f0e6ed;
+    --foreground_color: #523248;
+    --svg_filter: invert(23%) sepia(8%) saturate(2301%) hue-rotate(266deg) brightness(90%) contrast(93%);
+}
+
+body {
+    background: var(--background_color);
+    color: var(--foreground_color);
+    transition: color 1s, background-color 1s;
+}
+
+a {
+    color: var(--foreground_color);
+    filter: brightness(2);
+    transition: color 1s;
+    font-style: italic;
+}
+
+hr {
+    color: var(--foreground_color);
+    transition: color 1s;
+}
+
+#title {
+    font-family: 'Old Standard TT', serif;
+}
+
+.main_heading {
+    font-family: 'Old Standard TT', serif;
+    margin-top: 1.25em;
+    text-align: center;
+    border-bottom: 2px dotted var(--foreground_color);
+    line-height: 0.1em;
+    transition: border-bottom-color 1s;
+}
+
+.main_heading span {
+    background: var(--background_color);
+    transition: background 1s;
+    padding:0 10px;
+}
+
+.body_text {
+    font-family: Flamenco, sans-serif;
+    font-size: 1.25em;
+    line-height: 1.25em;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 0.5em;
+    font-size: 1em;
+    background: none;
+    border-color: var(--foreground_color);
+    border-style: solid;
+    border-radius: 10px;
+    transform: translateY(10%);
+    font-family: Flamenco, sans-serif;
+    color: var(--foreground_color);
+    margin: 4px;
+    transition: box-shadow 0.25s, scale 0.25s, border-color 1s, color 1s;
+}
+
+button > * {
+    vertical-align: middle;
+}
+
+button:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+#moon {
+    filter: var(--svg_filter);
+}
+
+html, body {
+    height: 100%;
+}
+
+ul {
+    font-family: Flamenco, sans-serif;
+    font-size: 1.25em;
+    line-height: 1.25em;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 48ch;
+}
