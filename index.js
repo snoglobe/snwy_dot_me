@@ -26,7 +26,6 @@ function update() {
 }
 
 for (let elem of document.querySelectorAll("*")) {
-    console.log(elem)
     elem.style.setProperty("-o-transition-property", "none")
     elem.style.setProperty("-moz-transition-property", "none")
     elem.style.setProperty("-ms-transition-property", "none")
