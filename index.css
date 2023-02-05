@@ -73,7 +73,7 @@ hr {
     align-items: center;
 }
 
-button {
+.navbutton {
     padding: 5px;
     font-size: 1em;
     background: none;
@@ -82,22 +82,30 @@ button {
     transform: translateY(10%);
     font-family: Flamenco, sans-serif;
     color: var(--foreground_color);
-    margin-left: 0;
-    margin-right: 0;
+    display: block;
     transition: box-shadow 0.25s, scale 0.25s, border-color 1s, color 1s;
+    filter: none;
+    font-style: unset;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0;
 }
 
-button > * {
+.navbutton > * {
     vertical-align: middle;
 }
 
-button:hover {
+.navbutton:hover {
     scale: 1.1;
     cursor: pointer;
 }
 
 #moon {
     filter: var(--svg_filter);
+}
+
+.moonbtn {
+    display: inherit;
 }
 
 html, body {

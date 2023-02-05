@@ -10,16 +10,22 @@
     <link rel="stylesheet" href="index.css">
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
 </head>
-<body onload="update()">
-    <script src="index.js"></script>
+<body>
     <div id="header">
         <h1 id="title">snwy ~ me</h1>
         <p style="scale: 2; margin-left: 16px; margin-right: 16px; "><b>|</b></p>
+        <noscript>
+            <style>
+                .moonbtn {
+                    display: none;
+                }
+            </style>
+        </noscript>
         <div id="navbuttons">
-            <button onclick="go('https://github.com/snoglobe')"><b>github</b></button>
-            <button onclick="go('https://blog.snwy.me')"><b>blog</b></button>
-            <button onclick="go('https://shop.snwy.me')"><b>shop</b></button>
-            <button onclick="toggleMode()"><img src="sleep_FILL1_wght100_GRAD200_opsz48.svg" style="height: 1em; margin: 0; transition: filter 1s;" id="moon"></button>
+            <a href="https://github.com/snoglobe" class="navbutton">github</a>
+            <a href="https://blog.snwy.me" class="navbutton">blog</a>
+            <a href="https://shop.snwy.me" class="navbutton">shop</a>
+            <a onclick="toggleMode()" class="navbutton moonbtn"><img src="sleep_FILL1_wght100_GRAD200_opsz48.svg" style="height: 1em; margin: 0; transition: filter 1s;" id="moon"></a>
         </div>
     </div>
     <hr>
@@ -33,6 +39,7 @@
         <li>discord: snwy#7763</li>
         <li>email: <a href="mailto:snwy@snwy.me">snwy@snwy.me</a></li>
     </ul>
+    <script src="index.js"></script>
 </body>
 </html>
 

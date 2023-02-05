@@ -5,7 +5,7 @@ if("dark_mode" in localStorage)
 else
     localStorage.setItem("dark_mode", "false");
 
-const r = document.querySelector(':root');
+const r = document.querySelector(":root")
 
 function toggleMode() {
     darkMode = !darkMode;
@@ -25,6 +25,22 @@ function update() {
     }
 }
 
-function go(url) {
-    window.location = url;
+for (let elem of document.querySelectorAll("*")) {
+    console.log(elem)
+    elem.style.setProperty("-o-transition-property", "none")
+    elem.style.setProperty("-moz-transition-property", "none")
+    elem.style.setProperty("-ms-transition-property", "none")
+    elem.style.setProperty("-webkit-transition-property", "none")
+    elem.style.setProperty("transition-property", "none")
 }
+update()
+requestAnimationFrame(() => {
+    for (let elem of document.querySelectorAll("*")) {
+        console.log(elem)
+        elem.style.setProperty("-o-transition-property", null)
+        elem.style.setProperty("-moz-transition-property", null)
+        elem.style.setProperty("-ms-transition-property", null)
+        elem.style.setProperty("-webkit-transition-property", null)
+        elem.style.setProperty("transition-property", null)
+    }
+})
