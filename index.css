@@ -109,11 +109,12 @@ ul {
 html {
     display: table;
     margin: auto;
+    padding: 1em;
 }
 
 body {
     display: table-cell;
     vertical-align: middle;
-    max-width: 25vw;
+    max-width: 450px;
 }
 
