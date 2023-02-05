@@ -29,10 +29,12 @@ hr {
 
 #title {
     font-family: 'Old Standard TT', serif;
+    font-style: italic;
 }
 
 .main_heading {
     font-family: 'Old Standard TT', serif;
+    font-style: italic;
     margin-top: 1.25em;
     text-align: center;
     border-bottom: 2px dotted var(--foreground_color);
