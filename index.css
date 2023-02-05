@@ -21,7 +21,10 @@ a {
 
 hr {
     color: var(--foreground_color);
-    transition: color 1s;
+    background-color: var(--foreground_color);
+    border: none;
+    height: 2px;
+    transition: color 1s, background-color 1s;
 }
 
 #title {
@@ -54,6 +57,16 @@ hr {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    padding: 0;
+}
+
+#navbuttons {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -66,7 +79,7 @@ button {
     transform: translateY(10%);
     font-family: Flamenco, sans-serif;
     color: var(--foreground_color);
-    margin: 4px;
+    margin: auto;
     transition: box-shadow 0.25s, scale 0.25s, border-color 1s, color 1s;
 }
 
@@ -101,5 +114,5 @@ html {
 body {
     display: table-cell;
     vertical-align: middle;
-    max-width: 48ch;
+    max-width: 25vw;
 }
