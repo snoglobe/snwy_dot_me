@@ -23,11 +23,15 @@ hr {
     border: none;
     height: 2px;
     transition: color 1s, background-color 1s;
+    margin-top: 1em;
 }
 
 #title {
     font-family: 'Old Standard TT', serif;
     font-style: italic;
+    padding-top: 0.25em;
+    line-height: 0;
+    white-space:nowrap;
 }
 
 .main_heading {
@@ -65,21 +69,21 @@ hr {
     display: flex;
     flex-grow: 1;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 button {
-    padding: 0.5em;
+    padding: 5px;
     font-size: 1em;
     background: none;
-    border-color: var(--foreground_color);
-    border-style: solid;
+    border: var(--foreground_color) 2px solid;
     border-radius: 10px;
     transform: translateY(10%);
     font-family: Flamenco, sans-serif;
     color: var(--foreground_color);
-    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
     transition: box-shadow 0.25s, scale 0.25s, border-color 1s, color 1s;
 }
 
@@ -98,6 +102,7 @@ button:hover {
 
 html, body {
     height: 100%;
+    margin: 0;
 }
 
 ul {
