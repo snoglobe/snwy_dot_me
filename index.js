@@ -26,11 +26,13 @@ function update() {
 }
 
 for (let elem of document.querySelectorAll("*")) {
-    elem.style.setProperty("-o-transition-property", "none")
-    elem.style.setProperty("-moz-transition-property", "none")
-    elem.style.setProperty("-ms-transition-property", "none")
-    elem.style.setProperty("-webkit-transition-property", "none")
-    elem.style.setProperty("transition-property", "none")
+    setTimeout(() => {
+        elem.style.setProperty("-o-transition-property", "none")
+        elem.style.setProperty("-moz-transition-property", "none")
+        elem.style.setProperty("-ms-transition-property", "none")
+        elem.style.setProperty("-webkit-transition-property", "none")
+        elem.style.setProperty("transition-property", "none")
+    }, 100)
 }
 update()
 requestAnimationFrame(() => {
