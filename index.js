@@ -26,22 +26,21 @@ function update() {
 }
 
 for (let elem of document.querySelectorAll("*")) {
-    setTimeout(() => {
-        elem.style.setProperty("-o-transition-property", "none")
-        elem.style.setProperty("-moz-transition-property", "none")
-        elem.style.setProperty("-ms-transition-property", "none")
-        elem.style.setProperty("-webkit-transition-property", "none")
-        elem.style.setProperty("transition-property", "none")
-    }, 100)
+    elem.style.setProperty("-o-transition-property", "none")
+    elem.style.setProperty("-moz-transition-property", "none")
+    elem.style.setProperty("-ms-transition-property", "none")
+    elem.style.setProperty("-webkit-transition-property", "none")
+    elem.style.setProperty("transition-property", "none")
 }
 update()
 requestAnimationFrame(() => {
     for (let elem of document.querySelectorAll("*")) {
-        console.log(elem)
-        elem.style.setProperty("-o-transition-property", null)
-        elem.style.setProperty("-moz-transition-property", null)
-        elem.style.setProperty("-ms-transition-property", null)
-        elem.style.setProperty("-webkit-transition-property", null)
-        elem.style.setProperty("transition-property", null)
-    }
+        setTimeout(() => {
+            elem.style.setProperty("-o-transition-property", null)
+            elem.style.setProperty("-moz-transition-property", null)
+            elem.style.setProperty("-ms-transition-property", null)
+            elem.style.setProperty("-webkit-transition-property", null)
+            elem.style.setProperty("transition-property", null)
+        }, 100)
+   }
 })
